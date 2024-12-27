@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="cuisine-filter">
+        <option value="All">All</option>
+        <option value="Italian">Italian</option>
+        <option value="Japanese">Japanese</option>
+        <option value="Mexican">Mexican</option>
+        <option value="French">French</option>
+        <option value="Indian">Indian</option>
+    </select>
+      
+    <div id="items-container"></div>
+      
+
+    <script>
+        // Sample data: an array of items with their respective cuisines
+        const items = [
+            { name: "Pizza", cuisine: "Italian" },
+            { name: "Sushi", cuisine: "Japanese" },
+            { name: "Tacos", cuisine: "Mexican" },
+            { name: "Croissant", cuisine: "French" },
+            { name: "Curry", cuisine: "Indian" },
+        ];
+
+        // Function to render items
+        function renderItems(filteredItems) {
+            const container = document.getElementById("items-container");
+            container.innerHTML = ""; // Clear existing items
+
+            filteredItems.forEach((item) => {
+                const itemElement = document.createElement("div");
+                itemElement.textContent = item.name;
+                container.appendChild(itemElement);
+            });
+        }
+
+        // Function to filter items by cuisine
+        function filterByCuisine(cuisine) {
+            if (cuisine === "All") {
+                renderItems(items);
+            } else {
+                const filteredItems = items.filter((item) => item.cuisine === cuisine);
+                renderItems(filteredItems);
+            }
+        }
+
+        // Event listener for the cuisine filter dropdown
+        const cuisineFilter = document.getElementById("cuisine-filter");
+
+        cuisineFilter.addEventListener("change", (event) => {
+            const selectedCuisine = event.target.value;
+            filterByCuisine(selectedCuisine);
+        });
+
+        // Initial rendering of all items
+        renderItems(items);
+
+    </script>
+</body>
+</html>

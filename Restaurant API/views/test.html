@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .page-wrapper {
+    position: absolute;
+    bottom: 0;
+    top: 35px;
+    width: 100%;
+    z-index: 11111;
+}
+
+footer p, footer strong, footer b, footer {
+    color: #b0b0b0;
+}
+
+.footer-top {
+    background: #303030;
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0 20px;
+    font-family: Rubik, sans-serif;
+}
+
+.footer-top, .footer-bottom {
+    background-color: #1c1f2f;
+}
+
+.footer-bottom {
+    padding: 15px 0;
+    border-top: 1px solid #313646;
+    background-color: #181828 !important;
+    color: #b0b0b0;
+    font-family: Rubik, sans-serif;
+}
+
+.footer-site-info {
+    font-size: 92.86%;
+}
+
+#footer-navigation, #footer-navigation li a:hover, 
+.custom-footer, .custom-footer li a:hover {
+    color: white;
+}
+
+#footer-navigation, #footer-navigation li a, 
+.custom-footer, .custom-footer li a {
+    color: #99a9b5;
+    padding-top: 15px;
+}
+
+.footer-bottom ul {
+    margin: 0;
+}
+
+.inline-inside {
+    font-size: 0;
+    line-height: 0;
+}
+
+.clearfix:after, .clearfix:before {
+    content: "";
+    display: table;
+}
+
+#footer-menu li {
+    display: inline-block;
+    padding: 0 21px;
+    position: relative;
+    line-height: 1;
+}
+
+#footer-menu li+li:before {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: -1px;
+    top: 0;
+    border-left: 1px solid #232234;
+    border-right: 1px solid #333146;
+}
+
+#footer-socials {
+    text-align: right;
+}
+
+#footer-socials .socials {
+    margin: 0 -7px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+a.socials-item {
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #141421;
+    border: 1px solid #2e2e4c;
+    box-shadow: 3px 9px 16px rgba(0, 0, 0, 0.4), 
+                -3px -3px 10px rgba(255, 255, 255, 0.06), 
+                inset 14px 14px 26px rgba(0, 0, 0, 0.3), 
+                inset -3px -3px 15px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+}
+
+a.socials-item:hover {
+    box-shadow: 0 0 20px rgba(84, 1, 74, 0.7);
+    border-color: rgba(255, 6, 224, 0.61);
+    background: linear-gradient(to right, 
+                rgba(255, 9, 9, 0.13), 
+                #c000ffb5, 
+                rgba(255, 0, 94, 0.14));
+}
+
+footer p, footer li {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.widget {
+    margin-bottom: 50px;
+}
+
+.footer-title {
+    margin-bottom: 40px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding-bottom: 15px;
+    font-size: 16px;
+    position: relative;
+}
+
+.footer-title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    background: #fff;
+    opacity: 0.2;
+}
+
+.gem-contacts-item {
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.gem-contacts-item i {
+    padding-right: 10px;
+}
+
+footer .widget ul {
+    list-style: none;
+    margin-top: 5px;
+}
+
+.posts li {
+    border-bottom: 1px solid #393d50;
+    padding: 6px 0 12px;
+}
+
+.gem-pp-posts-date {
+    color: #00bcd4;
+    font-size: 89.5%;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea {
+    background: #1c1f2f;
+    border: 1px solid #2e344d;
+    box-shadow: 10px 10px 36px rgba(0, 0, 0, 0.5), 
+                -13px -13px 23px rgba(255, 255, 255, 0.03);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.wpcf7-form-control-wrap input:hover, 
+.wpcf7-form-control-wrap textarea:hover {
+    background-color: transparent;
+    box-shadow: 10px 10px 36px rgba(0, 0, 0, 0.5), 
+                -13px -13px 23px rgba(255, 255, 255, 0.03), 
+                inset 14px 14px 70px rgba(0, 0, 0, 0.2), 
+                inset -15px -15px 30px rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.wpcf7 .wpcf7-form .contact-form-footer textarea {
+    height: 160px;
+}
+
+.wpcf7 .wpcf7-form .contact-form-footer .wpcf7-submit {
+    width: 100%;
+    padding: 11px;
+    margin: 0;
+    line-height: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div id="waterdrop"></div>
+        <footer>
+          <div class="footer-top">
+            <div class="pt-exebar">
+    
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12 footer-col-3">
+                  <div class="widget footer_widget">
+                    <h5 class="footer-title">Address</h5>
+                    <div class="gem-contacts">
+                      <div class="gem-contacts-item gem-contacts-address">Corporate Office :<br> Doon House, B-275(A), First floor
+                        Sector-57, Shushant Lok 3
+                        Near Hong Kong Bazzar, Gurugram Pin 122001, Haryana.
+                      </div>
+                      <div class="gem-contacts-item gem-contacts-phone"><i class="fa fa-phone" aria-hidden="true"></i> Phone: <a href="">+91-9122588799</a></div>
+    
+                      <div class="gem-contacts-item gem-contacts-address mt-2">Reg. Office :<br> Doon House, D2/3,
+                        4th Floor, Chandra Tower, IDBI Bank Building
+                        Dimna Road, Mango, Jamshedpur-831012, Jharkhand.</div>
+                      <div class="gem-contacts-item gem-contacts-phone"><i class="fa fa-phone" aria-hidden="true"></i> Phone: <a>+91 9122588799</a></div>
+    
+                    </div>
+                  </div>
+    
+                </div>
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                  <div class="row">
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6">
+                      <div class="widget footer_widget">
+                        <h5 class="footer-title">Recent News</h5>
+                        <ul class="posts  styled">
+                          <li class="clearfix gem-pp-posts">
+                            <div class="gem-pp-posts-text">
+                              <div class="gem-pp-posts-item">
+                                <a href="#">Want to start Your Own Play School.
+                                </a>
+                              </div>
+                              <div class="gem-pp-posts-date">Call +91-9122588799</div>
+                            </div>
+                          </li>
+                          <li class="clearfix gem-pp-posts">
+                            <div class="gem-pp-posts-text">
+                              <div class="gem-pp-posts-item">
+                                <a href="#">Now we are in Faridabad,Now we are in DaudNagar.
+                                </a>
+                              </div>
+                              <div class="gem-pp-posts-date">Call +91-9122588799, +91-9122588799</div>
+                            </div>
+                          </li>
+                          <li class="clearfix gem-pp-posts">
+                            <div class="gem-pp-posts-text">
+                              <div class="gem-pp-posts-item">
+                                <a href="">Now we are in Ranchi, Admission open
+                                </a>
+                              </div>
+                              <div class="gem-pp-posts-date">Call +91-9122588799, +91-9122588799</div>
+                            </div>
+                          </li>
+    
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-6">
+                      <div class="widget">
+                        <h5 class="footer-title">Email Us</h5>
+                        <div class="textwidget">
+                          <div role="form" class="wpcf7" id="wpcf7-f4-o1" lang="en-US" dir="ltr">
+    
+                            <form method="post" class="wpcf7-form" novalidate="novalidate">
+    
+                              <div class="contact-form-footer">
+                                <p><span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Your name"></span></p>
+                                <p><span class="wpcf7-form-control-wrap your-email_1"><input type="email" name="your-email_1" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Your email"></span></p>
+                                <p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your message"></textarea></span></p>
+                                <div><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-5 col-sm-12 footer-col-4">
+                  <div class="widget widget_gallery gallery-grid-4">
+                    <h5 class="footer-title">Our Gallery</h5>
+                    <ul class="magnific-image">
+    
+                      <li><a class="magnific-anchor"><img src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80" alt=""></a></li>
+                      <li><a class="magnific-anchor"><img src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80" alt=""></a></li>
+                      <li><a class="magnific-anchor"><img src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80" alt=""></a></li>
+                      <li><a class="magnific-anchor"><img src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80" alt=""></a></li>
+                      <li><a class="magnific-anchor"><img src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80" alt=""></a></li>
+                      <li><a class="magnific-anchor"><img src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80" alt=""></a></li>
+                      <li><a class="magnific-anchor"><img src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80" alt=""></a></li>
+                      <li><a class="magnific-anchor"><img src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80" alt=""></a></li>
+                      <li><a class="magnific-anchor"><img src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80" alt=""></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="row">
+    
+                <div class="col-md-3">
+                  <div class="footer-site-info">2020 © <a href="https://www.youtube.com/watch?v=pdr4IzBpacI&t=34s" target="_blank">Top HTML & CSS Program </a></div>
+                </div>
+    
+                <div class="col-md-6">
+                  <nav id="footer-navigation" class="site-navigation footer-navigation centered-box" role="navigation">
+                    <ul id="footer-menu" class="nav-menu styled clearfix inline-inside">
+                      <li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="#">Support</a></li>
+                      <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="#">Contact Us</a></li>
+                      <li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a href="#">Disclaimer</a></li>
+                      <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a href="#">Add more</a></li>
+                    </ul>
+                  </nav>
+                </div>
+    
+                <div class="col-md-3">
+                  <div id="footer-socials">
+                    <div class="socials inline-inside socials-colored">
+    
+                      <a href="#" target="_blank" title="Facebook" class="socials-item">
+                        <i class="fab fa-facebook-f facebook"></i>
+                      </a>
+                      <a href="#" target="_blank" title="Twitter" class="socials-item">
+                        <i class="fab fa-twitter twitter"></i>
+    
+                      </a>
+                      <a href="#" target="_blank" title="Instagram" class="socials-item">
+                        <i class="fab fa-instagram instagram"></i>
+                      </a>
+                      <a href="#" target="_blank" title="YouTube" class="socials-item">
+                        <i class="fab fa-youtube youtube"></i>
+                      </a>
+                      <a href="#" target="_blank" title="Telegram" class="socials-item">
+                        <i class="fab fa-telegram telegram"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    
+     <script> jQuery('#waterdrop').raindrops({color:'#1c1f2f', canvasHeight:150, density: 0.1, frequency: 20});
+    </script>
+</body>
+</html>
